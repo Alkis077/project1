@@ -1,0 +1,12 @@
+# build
+build/
+search
+
+# cache / outputs
+cache/
+*.bin
+output*.txt
+results/
+
+# editor
+.vscode/
