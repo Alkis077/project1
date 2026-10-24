@@ -1,5 +1,5 @@
 CXX      = g++
-CXXFLAGS = -std=c++17 -O2 -Wall -Wextra -Iinclude $(shell pkg-config --cflags opencv4)
+CXXFLAGS = -std=c++17 -O2 -fopenmp -Wall -Wextra -Iinclude $(shell pkg-config --cflags opencv4)
 LDLIBS   = $(shell pkg-config --libs opencv4)
 
 TARGET = search
