@@ -60,7 +60,7 @@ static std::vector<float> initCenters(const std::vector<float> &points, int n, i
     return centers;
 }
 
-static int nearest(const float *p, const std::vector<float> &centers, int K, int dim)
+int nearestCenter(const float *p, const std::vector<float> &centers, int K, int dim)
 {
     int best = 0;
     float bestDist = sqDist(p, &centers[0], dim);
@@ -94,7 +94,7 @@ KMeansResult kmeans(const std::vector<float> &points, int n, int dim, int K,
         int changes = 0;
         #pragma omp parallel for reduction(+ : changes)
         for (int i = 0; i < n; i++) {
-            int c = nearest(&points[(size_t)i * dim], res.centers, K, dim);
+            int c = nearestCenter(&points[(size_t)i * dim], res.centers, K, dim);
             if (c != res.assign[i]) {
                 res.assign[i] = c;
                 changes++;

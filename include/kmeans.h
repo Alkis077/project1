@@ -14,6 +14,9 @@ inline float sqDist(const float *a, const float *b, int dim)
     return s;
 }
 
+// index of the center (out of K, each of length dim) that is closest to p
+int nearestCenter(const float *p, const std::vector<float> &centers, int K, int dim);
+
 struct KMeansResult {
     std::vector<float> centers;   // K vectors of length dim, one after the other
     std::vector<int> assign;      // cluster of every point

@@ -47,8 +47,7 @@ static std::vector<float> sampleDescriptors(const Descriptors &desc, int S, unsi
 // The vocabulary depends on the training images, K, S and the seed, so all of
 // them go into the file name. The training images (which come from the split
 // file) are represented by a hash of their ids.
-static std::string vocabFile(const std::vector<Image> &train, int K, int S,
-                             unsigned seed, const std::string &cacheDir)
+std::string vocabName(const std::vector<Image> &train, int K, int S, unsigned seed)
 {
     uint64_t h = 1469598103934665603ULL;   // FNV-1a hash
     for (const Image &img : train)
@@ -58,8 +57,14 @@ static std::string vocabFile(const std::vector<Image> &train, int K, int S,
         }
     char hex[17];
     snprintf(hex, sizeof(hex), "%016llx", (unsigned long long)h);
-    return cacheDir + "/vocab/K" + std::to_string(K) + "_S" + std::to_string(S) +
-           "_seed" + std::to_string(seed) + "_train" + hex + ".bin";
+    return "K" + std::to_string(K) + "_S" + std::to_string(S) +
+           "_seed" + std::to_string(seed) + "_train" + hex;
+}
+
+static std::string vocabFile(const std::vector<Image> &train, int K, int S,
+                             unsigned seed, const std::string &cacheDir)
+{
+    return cacheDir + "/vocab/" + vocabName(train, K, S, seed) + ".bin";
 }
 
 // file format: K (int), then K*128 floats

@@ -12,4 +12,8 @@
 std::vector<float> buildVocabulary(const std::vector<Image> &train, int K, int S,
                                    unsigned seed, const std::string &cacheDir);
 
+// short name that describes a vocabulary (K, S, seed and the training images),
+// used for the names of cache files that depend on it
+std::string vocabName(const std::vector<Image> &train, int K, int S, unsigned seed);
+
 #endif

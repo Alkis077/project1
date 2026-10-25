@@ -13,7 +13,7 @@ struct Image {
 struct Dataset {
     std::vector<Image> train;    // all 6 images of the training sequences
     std::vector<Image> queries;  // image 1 of each sequence of the chosen set
-    std::vector<Image> base;     // images 2..6 of the chosen set + MIRFlickr
+    std::vector<Image> base;     // images 2..6 of the chosen set (MIRFlickr is added later)
 };
 
 // builds train / queries / base from the split file.
@@ -21,10 +21,10 @@ struct Dataset {
 Dataset loadDataset(const std::string &hpDir, const std::string &splitFile,
                     const std::string &set);
 
-// appends the first D MIRFlickr images (im1.jpg, im2.jpg, ...) to the base.
-// Images without any SIFT descriptor are skipped and replaced by the next one.
-void addDistractors(Dataset &ds, const std::string &mirDir, int D,
-                    const std::string &cacheDir);
+const int MIR_TOTAL = 25000;   // MIRFlickr images: im1.jpg ... im25000.jpg
+
+// MIRFlickr image number i (1..MIR_TOTAL)
+Image mirImage(const std::string &mirDir, int i);
 
 // 'i' for illumination, 'v' for viewpoint, 0 for MIRFlickr
 char category(const Image &img);

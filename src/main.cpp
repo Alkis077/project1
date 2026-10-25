@@ -3,6 +3,7 @@
 #include <vector>
 
 #include "args.h"
+#include "bovw.h"
 #include "dataset.h"
 #include "vocabulary.h"
 
@@ -25,11 +26,23 @@ int main(int argc, char **argv)
 
         std::vector<float> vocab = buildVocabulary(ds.train, args.vocab, args.S,
                                                    args.seed, args.cacheDir);
-        std::cout << "Vocabulary: " << vocab.size() / 128 << " visual words\n";
-        std::cout << "First word, first 8 values:";
-        for (int j = 0; j < 8; j++)
-            std::cout << " " << vocab[j];
-        std::cout << "\n";
+        Database db = buildDatabase(ds, vocab, args.vocab, args.mirDir, args.D, args.set,
+                                    args.cacheDir,
+                                    vocabName(ds.train, args.vocab, args.S, args.seed));
+
+        std::cout << "Queries: " << db.queries.size() << ", base: " << db.base.size()
+                  << ", vector length: " << db.dim << "\n";
+
+        // every vector should sum to 1 (h_j / n_I over all words)
+        const float *x = db.query(0);
+        float sum = 0;
+        int nonZero = 0;
+        for (int j = 0; j < db.dim; j++) {
+            sum += x[j];
+            if (x[j] > 0) nonZero++;
+        }
+        std::cout << "Query " << db.queries[0].id << ": sum " << sum << ", "
+                  << nonZero << " of " << db.dim << " words appear\n";
     } catch (const std::exception &e) {
         std::cerr << "Error: " << e.what() << "\n";
         return 1;
