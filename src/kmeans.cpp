@@ -101,7 +101,8 @@ KMeansResult kmeans(const std::vector<float> &points, int n, int dim, int K,
             }
         }
         res.iterations = it;
-        std::cerr << "k-means iteration " << it << ": " << changes << " points changed\n";
+        if (it % 10 == 0 || changes == 0)
+            std::cerr << "k-means iteration " << it << ": " << changes << " points changed\n";
         if (changes == 0)
             break;
 
