@@ -1,0 +1,96 @@
+Vocabulary: read from cache/vocab/K256_S500_seed1_train06f0daf54d84ccf7.bin
+BoVW: read from cache/bovw/K256_S500_seed1_train06f0daf54d84ccf7_validation_D25000.bin
+Queries: 23, base: 25100
+k-means iteration 10: 741 points changed
+k-means iteration 20: 455 points changed
+k-means iteration 30: 221 points changed
+k-means iteration 40: 80 points changed
+k-means iteration 50: 72 points changed
+k-means iteration 60: 68 points changed
+k-means iteration 70: 56 points changed
+k-means iteration 80: 55 points changed
+k-means iteration 90: 21 points changed
+k-means iteration 100: 23 points changed
+IVF: 159 clusters, k-means 100 iterations
+k-means iteration 10: 930 points changed
+k-means iteration 20: 242 points changed
+k-means iteration 30: 181 points changed
+k-means iteration 40: 73 points changed
+k-means iteration 50: 52 points changed
+k-means iteration 60: 31 points changed
+k-means iteration 70: 54 points changed
+k-means iteration 80: 23 points changed
+k-means iteration 90: 3 points changed
+k-means iteration 95: 0 points changed
+k-means iteration 10: 810 points changed
+k-means iteration 20: 258 points changed
+k-means iteration 30: 152 points changed
+k-means iteration 40: 80 points changed
+k-means iteration 50: 36 points changed
+k-means iteration 60: 20 points changed
+k-means iteration 69: 0 points changed
+k-means iteration 10: 999 points changed
+k-means iteration 20: 277 points changed
+k-means iteration 30: 110 points changed
+k-means iteration 40: 65 points changed
+k-means iteration 50: 16 points changed
+k-means iteration 60: 31 points changed
+k-means iteration 70: 30 points changed
+k-means iteration 80: 16 points changed
+k-means iteration 90: 23 points changed
+k-means iteration 100: 14 points changed
+k-means iteration 10: 908 points changed
+k-means iteration 20: 371 points changed
+k-means iteration 30: 222 points changed
+k-means iteration 40: 148 points changed
+k-means iteration 50: 69 points changed
+k-means iteration 60: 25 points changed
+k-means iteration 70: 6 points changed
+k-means iteration 80: 4 points changed
+k-means iteration 90: 0 points changed
+k-means iteration 10: 894 points changed
+k-means iteration 20: 290 points changed
+k-means iteration 30: 130 points changed
+k-means iteration 40: 85 points changed
+k-means iteration 50: 28 points changed
+k-means iteration 60: 9 points changed
+k-means iteration 70: 36 points changed
+k-means iteration 80: 35 points changed
+k-means iteration 90: 4 points changed
+k-means iteration 94: 0 points changed
+k-means iteration 10: 947 points changed
+k-means iteration 20: 352 points changed
+k-means iteration 30: 176 points changed
+k-means iteration 40: 65 points changed
+k-means iteration 50: 68 points changed
+k-means iteration 60: 25 points changed
+k-means iteration 70: 14 points changed
+k-means iteration 76: 0 points changed
+k-means iteration 10: 887 points changed
+k-means iteration 20: 331 points changed
+k-means iteration 30: 166 points changed
+k-means iteration 40: 77 points changed
+k-means iteration 50: 46 points changed
+k-means iteration 60: 15 points changed
+k-means iteration 70: 18 points changed
+k-means iteration 80: 8 points changed
+k-means iteration 90: 13 points changed
+k-means iteration 100: 9 points changed
+k-means iteration 10: 797 points changed
+k-means iteration 20: 345 points changed
+k-means iteration 30: 143 points changed
+k-means iteration 40: 88 points changed
+k-means iteration 50: 30 points changed
+k-means iteration 60: 18 points changed
+k-means iteration 70: 9 points changed
+k-means iteration 80: 21 points changed
+k-means iteration 90: 5 points changed
+k-means iteration 100: 3 points changed
+IVFPQ: 8 parts of length 32, 256 centroids each
+IVFPQ
+All (23 queries): Recall@5 0.53913, Recall@10 0.617391, mAP@10 0.544417, time 0.439074 ms
+Illumination (11 queries): Recall@5 0.490909, Recall@10 0.545455, mAP@10 0.479654, time 0.446154 ms
+Viewpoint (12 queries): Recall@5 0.583333, Recall@10 0.683333, mAP@10 0.603783, time 0.432583 ms
+Queries with fewer than 10 results: 0
+Output written to results/validation/ivfpq/M8_nprobe10.txt
+Total time: 32.7385 s

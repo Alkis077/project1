@@ -1,0 +1,14 @@
+Vocabulary: read from cache/vocab/K256_S500_seed1_train06f0daf54d84ccf7.bin
+BoVW: read from cache/bovw/K256_S500_seed1_train06f0daf54d84ccf7_validation_D1000.bin
+Queries: 23, base: 1115
+k-means iteration 10: 16 points changed
+k-means iteration 20: 2 points changed
+k-means iteration 29: 0 points changed
+IVF: 34 clusters, k-means 29 iterations
+IVFFlat
+All (23 queries): Recall@5 0.782609, Recall@10 0.834783, mAP@10 0.794762, time 0.241887 ms
+Illumination (11 queries): Recall@5 0.709091, Recall@10 0.8, mAP@10 0.74632, time 0.241782 ms
+Viewpoint (12 queries): Recall@5 0.85, Recall@10 0.866667, mAP@10 0.839167, time 0.241983 ms
+Queries with fewer than 10 results: 0
+Output written to results/validation/D/ivfflat_D1000.txt
+Total time: 0.153064 s

@@ -1,0 +1,40 @@
+Vocabulary: 206122 descriptors from 420 training images
+k-means iteration 10: 8256 points changed
+k-means iteration 20: 3227 points changed
+k-means iteration 30: 1782 points changed
+k-means iteration 40: 1083 points changed
+k-means iteration 50: 704 points changed
+k-means iteration 60: 581 points changed
+k-means iteration 70: 535 points changed
+k-means iteration 80: 403 points changed
+k-means iteration 90: 323 points changed
+k-means iteration 100: 187 points changed
+Vocabulary: k-means finished after 100 iterations
+Vocabulary: saved to cache/vocab/K512_S500_seed1_train06f0daf54d84ccf7.bin
+BoVW: 23 queries, 115 HPatches base images
+Skipping im2009.jpg (no SIFT descriptors)
+Skipping im2096.jpg (no SIFT descriptors)
+Skipping im2541.jpg (no SIFT descriptors)
+Skipping im3090.jpg (no SIFT descriptors)
+Skipping im4496.jpg (no SIFT descriptors)
+Skipping im4953.jpg (no SIFT descriptors)
+Skipping im6046.jpg (no SIFT descriptors)
+Skipping im13064.jpg (no SIFT descriptors)
+Skipping im18445.jpg (no SIFT descriptors)
+Skipping im18976.jpg (no SIFT descriptors)
+Skipping im19300.jpg (no SIFT descriptors)
+Skipping im19322.jpg (no SIFT descriptors)
+Skipping im19593.jpg (no SIFT descriptors)
+Skipping im21455.jpg (no SIFT descriptors)
+Skipping im21828.jpg (no SIFT descriptors)
+MIRFlickr: 24985 / 25000
+Warning: only 24985 MIRFlickr images have SIFT descriptors
+BoVW: saved to cache/bovw/K512_S500_seed1_train06f0daf54d84ccf7_validation_D25000.bin
+Queries: 23, base: 25100
+Exact
+All (23 queries): Recall@5 0.747826, Recall@10 0.791304, mAP@10 0.744914, time 12.5722 ms
+Illumination (11 queries): Recall@5 0.690909, Recall@10 0.745455, mAP@10 0.686465, time 12.5415 ms
+Viewpoint (12 queries): Recall@5 0.8, Recall@10 0.833333, mAP@10 0.798492, time 12.6003 ms
+Queries with fewer than 10 results: 0
+Output written to results/validation/vocab/K512.txt
+Total time: 457.831 s

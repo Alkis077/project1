@@ -6,7 +6,6 @@ search
 cache/
 *.bin
 output*.txt
-results/
 
 # editor
 .vscode/

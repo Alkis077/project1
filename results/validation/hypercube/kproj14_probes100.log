@@ -1,0 +1,11 @@
+Vocabulary: read from cache/vocab/K256_S500_seed1_train06f0daf54d84ccf7.bin
+BoVW: read from cache/bovw/K256_S500_seed1_train06f0daf54d84ccf7_validation_D25000.bin
+Queries: 23, base: 25100
+Hypercube: 7600 of 16384 vertices have points, largest has 53
+Hypercube
+All (23 queries): Recall@5 0.173913, Recall@10 0.173913, mAP@10 0.171014, time 0.168722 ms
+Illumination (11 queries): Recall@5 0.127273, Recall@10 0.127273, mAP@10 0.121212, time 0.162782 ms
+Viewpoint (12 queries): Recall@5 0.216667, Recall@10 0.216667, mAP@10 0.216667, time 0.174167 ms
+Queries with fewer than 10 results: 0
+Output written to results/validation/hypercube/kproj14_probes100.txt
+Total time: 0.220295 s

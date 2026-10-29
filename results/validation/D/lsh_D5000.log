@@ -1,0 +1,10 @@
+Vocabulary: read from cache/vocab/K256_S500_seed1_train06f0daf54d84ccf7.bin
+BoVW: read from cache/bovw/K256_S500_seed1_train06f0daf54d84ccf7_validation_D5000.bin
+Queries: 23, base: 5115
+LSH
+All (23 queries): Recall@5 0.782609, Recall@10 0.817391, mAP@10 0.784155, time 0.619243 ms
+Illumination (11 queries): Recall@5 0.709091, Recall@10 0.763636, mAP@10 0.721111, time 0.564509 ms
+Viewpoint (12 queries): Recall@5 0.85, Recall@10 0.866667, mAP@10 0.841944, time 0.669417 ms
+Queries with fewer than 10 results: 0
+Output written to results/validation/D/lsh_D5000.txt
+Total time: 0.198146 s

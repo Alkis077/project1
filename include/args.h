@@ -10,7 +10,7 @@ struct Args {
     std::string splitFile;
     std::string set = "validation";
     std::string outFile = "output.txt";
-    std::string cacheDir;        // -cache <dir>: save/reuse SIFT descriptors there. Empty = no cache
+    std::string cacheDir;        // -cache <dir>: save/reuse SIFT, vocabulary and BoVW there. Empty = no cache
     std::string method;          // exact, lsh, hypercube, ivfflat, ivfpq
     int vocab = 256;
     int S = 500;

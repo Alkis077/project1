@@ -1,0 +1,21 @@
+Vocabulary: read from cache/vocab/K256_S500_seed1_train06f0daf54d84ccf7.bin
+BoVW: read from cache/bovw/K256_S500_seed1_train06f0daf54d84ccf7_test_D25000.bin
+Queries: 23, base: 25100
+k-means iteration 10: 807 points changed
+k-means iteration 20: 385 points changed
+k-means iteration 30: 257 points changed
+k-means iteration 40: 95 points changed
+k-means iteration 50: 82 points changed
+k-means iteration 60: 81 points changed
+k-means iteration 70: 23 points changed
+k-means iteration 80: 8 points changed
+k-means iteration 90: 9 points changed
+k-means iteration 100: 1 points changed
+IVF: 159 clusters, k-means 100 iterations
+IVFFlat
+All (23 queries): Recall@5 0.669565, Recall@10 0.721739, mAP@10 0.681763, time 2.58849 ms
+Illumination (11 queries): Recall@5 0.672727, Recall@10 0.709091, mAP@10 0.675657, time 2.61587 ms
+Viewpoint (12 queries): Recall@5 0.666667, Recall@10 0.733333, mAP@10 0.687361, time 2.56339 ms
+Queries with fewer than 10 results: 0
+Output written to results/test/final/ivfflat.txt
+Total time: 17.445 s

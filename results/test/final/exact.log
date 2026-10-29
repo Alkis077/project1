@@ -1,0 +1,28 @@
+Vocabulary: read from cache/vocab/K256_S500_seed1_train06f0daf54d84ccf7.bin
+BoVW: 23 queries, 115 HPatches base images
+Skipping im2009.jpg (no SIFT descriptors)
+Skipping im2096.jpg (no SIFT descriptors)
+Skipping im2541.jpg (no SIFT descriptors)
+Skipping im3090.jpg (no SIFT descriptors)
+Skipping im4496.jpg (no SIFT descriptors)
+Skipping im4953.jpg (no SIFT descriptors)
+Skipping im6046.jpg (no SIFT descriptors)
+Skipping im13064.jpg (no SIFT descriptors)
+Skipping im18445.jpg (no SIFT descriptors)
+Skipping im18976.jpg (no SIFT descriptors)
+Skipping im19300.jpg (no SIFT descriptors)
+Skipping im19322.jpg (no SIFT descriptors)
+Skipping im19593.jpg (no SIFT descriptors)
+Skipping im21455.jpg (no SIFT descriptors)
+Skipping im21828.jpg (no SIFT descriptors)
+MIRFlickr: 24985 / 25000
+Warning: only 24985 MIRFlickr images have SIFT descriptors
+BoVW: saved to cache/bovw/K256_S500_seed1_train06f0daf54d84ccf7_test_D25000.bin
+Queries: 23, base: 25100
+Exact
+All (23 queries): Recall@5 0.686957, Recall@10 0.73913, mAP@10 0.699155, time 5.69497 ms
+Illumination (11 queries): Recall@5 0.709091, Recall@10 0.745455, mAP@10 0.71202, time 5.69805 ms
+Viewpoint (12 queries): Recall@5 0.666667, Recall@10 0.733333, mAP@10 0.687361, time 5.69216 ms
+Queries with fewer than 10 results: 0
+Output written to results/test/final/exact.txt
+Total time: 186.648 s

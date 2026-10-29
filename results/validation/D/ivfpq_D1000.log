@@ -1,0 +1,58 @@
+Vocabulary: read from cache/vocab/K256_S500_seed1_train06f0daf54d84ccf7.bin
+BoVW: read from cache/bovw/K256_S500_seed1_train06f0daf54d84ccf7_validation_D1000.bin
+Queries: 23, base: 1115
+k-means iteration 10: 16 points changed
+k-means iteration 20: 2 points changed
+k-means iteration 29: 0 points changed
+IVF: 34 clusters, k-means 29 iterations
+k-means iteration 10: 1 points changed
+k-means iteration 11: 0 points changed
+k-means iteration 10: 0 points changed
+k-means iteration 10: 8 points changed
+k-means iteration 17: 0 points changed
+k-means iteration 9: 0 points changed
+k-means iteration 9: 0 points changed
+k-means iteration 8: 0 points changed
+k-means iteration 10: 3 points changed
+k-means iteration 14: 0 points changed
+k-means iteration 10: 1 points changed
+k-means iteration 15: 0 points changed
+k-means iteration 10: 0 points changed
+k-means iteration 9: 0 points changed
+k-means iteration 10: 0 points changed
+k-means iteration 10: 0 points changed
+k-means iteration 10: 5 points changed
+k-means iteration 17: 0 points changed
+k-means iteration 9: 0 points changed
+k-means iteration 10: 1 points changed
+k-means iteration 12: 0 points changed
+k-means iteration 10: 1 points changed
+k-means iteration 11: 0 points changed
+k-means iteration 9: 0 points changed
+k-means iteration 8: 0 points changed
+k-means iteration 10: 2 points changed
+k-means iteration 13: 0 points changed
+k-means iteration 8: 0 points changed
+k-means iteration 10: 1 points changed
+k-means iteration 12: 0 points changed
+k-means iteration 10: 0 points changed
+k-means iteration 7: 0 points changed
+k-means iteration 9: 0 points changed
+k-means iteration 9: 0 points changed
+k-means iteration 10: 1 points changed
+k-means iteration 13: 0 points changed
+k-means iteration 8: 0 points changed
+k-means iteration 10: 1 points changed
+k-means iteration 13: 0 points changed
+k-means iteration 10: 0 points changed
+k-means iteration 10: 0 points changed
+k-means iteration 10: 0 points changed
+k-means iteration 9: 0 points changed
+IVFPQ: 32 parts of length 8, 256 centroids each
+IVFPQ
+All (23 queries): Recall@5 0.747826, Recall@10 0.808696, mAP@10 0.771273, time 0.26923 ms
+Illumination (11 queries): Recall@5 0.690909, Recall@10 0.781818, mAP@10 0.73474, time 0.268318 ms
+Viewpoint (12 queries): Recall@5 0.8, Recall@10 0.833333, mAP@10 0.804762, time 0.270067 ms
+Queries with fewer than 10 results: 0
+Output written to results/validation/D/ivfpq_D1000.txt
+Total time: 0.755872 s

@@ -1,0 +1,20 @@
+Vocabulary: read from cache/vocab/K256_S500_seed1_train06f0daf54d84ccf7.bin
+BoVW: 23 queries, 115 HPatches base images
+Skipping im2009.jpg (no SIFT descriptors)
+Skipping im2096.jpg (no SIFT descriptors)
+Skipping im2541.jpg (no SIFT descriptors)
+Skipping im3090.jpg (no SIFT descriptors)
+Skipping im4496.jpg (no SIFT descriptors)
+Skipping im4953.jpg (no SIFT descriptors)
+Skipping im6046.jpg (no SIFT descriptors)
+MIRFlickr: 9993 / 10000
+MIRFlickr: 10000 / 10000
+BoVW: saved to cache/bovw/K256_S500_seed1_train06f0daf54d84ccf7_validation_D10000.bin
+Queries: 23, base: 10115
+Exact
+All (23 queries): Recall@5 0.765217, Recall@10 0.8, mAP@10 0.768758, time 2.50875 ms
+Illumination (11 queries): Recall@5 0.690909, Recall@10 0.745455, mAP@10 0.701039, time 2.53773 ms
+Viewpoint (12 queries): Recall@5 0.833333, Recall@10 0.85, mAP@10 0.830833, time 2.48219 ms
+Queries with fewer than 10 results: 0
+Output written to results/validation/D/exact_D10000.txt
+Total time: 85.2824 s
