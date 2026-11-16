@@ -11,11 +11,14 @@
 
 namespace fs = std::filesystem;
 
+// The files also keep the keypoint positions (needed for the geometric
+// verification), so they go in new folders and the older files without
+// positions are never read by mistake.
 static std::string cacheFile(const Image &img, const std::string &cacheDir)
 {
     if (img.seq.empty())
-        return cacheDir + "/mirflickr/" + img.id + ".sift";
-    return cacheDir + "/hpatches/" + img.id + ".sift";
+        return cacheDir + "/mirflickr_kp/" + img.id + ".sift";
+    return cacheDir + "/hpatches_kp/" + img.id + ".sift";
 }
 
 // OpenCV is used only here: to read the image and to run SIFT.
@@ -32,18 +35,23 @@ static Descriptors computeSift(const std::string &path)
     cv::Mat mat;
     sift->detectAndCompute(gray, cv::noArray(), keypoints, mat);
 
+    // row i of mat is the descriptor of keypoints[i]
     Descriptors desc;
     desc.rows = mat.rows;
     desc.data.resize((size_t)mat.rows * DIM);
+    desc.xy.resize((size_t)mat.rows * 2);
     for (int i = 0; i < mat.rows; i++) {
         const float *src = mat.ptr<float>(i);
         for (int j = 0; j < DIM; j++)
             desc.data[(size_t)i * DIM + j] = src[j];
+        desc.xy[(size_t)i * 2] = keypoints[i].pt.x;
+        desc.xy[(size_t)i * 2 + 1] = keypoints[i].pt.y;
     }
     return desc;
 }
 
-// file format: number of rows (int), then rows*128 bytes.
+// file format: number of rows (int), then rows*2 floats (x, y of every
+// keypoint), then rows*128 bytes.
 // SIFT values are whole numbers in [0,255] so one byte per value is enough.
 static void save(const std::string &file, const Descriptors &desc)
 {
@@ -58,6 +66,7 @@ static void save(const std::string &file, const Descriptors &desc)
     {
         std::ofstream out(tmp, std::ios::binary);
         out.write(reinterpret_cast<const char *>(&desc.rows), sizeof(desc.rows));
+        out.write(reinterpret_cast<const char *>(desc.xy.data()), desc.xy.size() * sizeof(float));
         out.write(reinterpret_cast<const char *>(bytes.data()), bytes.size());
         if (!out)
             throw std::runtime_error("cannot write " + tmp);
@@ -73,6 +82,10 @@ static bool load(const std::string &file, Descriptors &desc)
 
     int rows = 0;
     if (!in.read(reinterpret_cast<char *>(&rows), sizeof(rows)) || rows < 0)
+        return false;
+
+    desc.xy.resize((size_t)rows * 2);
+    if (!in.read(reinterpret_cast<char *>(desc.xy.data()), desc.xy.size() * sizeof(float)))
         return false;
 
     std::vector<uint8_t> bytes((size_t)rows * DIM);
