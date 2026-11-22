@@ -1,5 +1,8 @@
 CXX      = g++
-CXXFLAGS = -std=c++17 -O2 -fopenmp -Wall -Wextra -Iinclude $(shell pkg-config --cflags opencv4)
+# Eigen is included with -isystem, so that warnings from inside its headers
+# are not shown together with the warnings of our code
+CXXFLAGS = -std=c++17 -O2 -fopenmp -Wall -Wextra -Iinclude $(shell pkg-config --cflags opencv4) \
+           $(patsubst -I%,-isystem %,$(shell pkg-config --cflags eigen3))
 LDLIBS   = $(shell pkg-config --libs opencv4)
 
 TARGET = search
