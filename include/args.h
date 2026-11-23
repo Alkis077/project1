@@ -32,11 +32,21 @@ struct Args {
     int nprobe = 5;
     int pqM = 16;
     int nbits = 8;
+
+    // verify (2nd assignment)
+    int C = 50;                  // candidates from the 1st stage
+    double rho = 0.8;            // Lowe ratio
+    double tau = 3;              // inlier threshold (pixels)
+    int Tmax = 2000;             // -T: maximum RANSAC trials
+    double p = 0.99;             // probability for the adaptive limit
+    bool adaptive = true;        // -adaptive 0|1
 };
 
-// returns false (and prints a message) if the arguments are wrong
-bool parseArgs(int argc, char **argv, Args &args);
+// returns false (and prints a message) if the arguments are wrong.
+// verify = true: also accepts the options of verify, and -kclusters is
+// required for ivfflat and ivfpq
+bool parseArgs(int argc, char **argv, Args &args, bool verify = false);
 
-void printUsage(const char *prog);
+void printUsage(const char *prog, bool verify = false);
 
 #endif
