@@ -1,6 +1,7 @@
 # build
 build/
 search
+verify
 
 # cache / outputs
 cache/
