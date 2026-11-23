@@ -4,6 +4,7 @@
 #include <fstream>
 #include <iostream>
 #include <stdexcept>
+#include <unordered_map>
 
 #include "descriptors.h"
 #include "kmeans.h"
@@ -154,6 +155,16 @@ Database buildDatabase(const Dataset &ds, const std::vector<float> &vocab, int K
         file = cacheDir + "/bovw/" + vocabTag + "_" + set + "_D" + std::to_string(D) + ".bin";
         Database db;
         if (loadDatabase(file, K, db)) {
+            // the file keeps only the ids, so the paths are set again
+            // (HPatches from ds, MIRFlickr from mirDir)
+            std::unordered_map<std::string, std::string> paths;
+            for (const Image &img : ds.queries)
+                paths[img.id] = img.path;
+            for (const Image &img : ds.base)
+                paths[img.id] = img.path;
+            for (std::vector<Image> *imgs : {&db.queries, &db.base})
+                for (Image &img : *imgs)
+                    img.path = img.seq.empty() ? mirDir + "/" + img.id : paths[img.id];
             std::cerr << "BoVW: read from " << file << "\n";
             return db;
         }
