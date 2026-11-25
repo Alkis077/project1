@@ -23,9 +23,10 @@ verify: build/verify.o $(OBJS)
 build/%.o: src/%.cpp | build
 	$(CXX) $(CXXFLAGS) -MMD -MP -c $< -o $@
 
-# checks of the DLT and RANSAC code (tests/test_geometry.cpp)
-build/test_geometry: tests/test_geometry.cpp build/homography.o build/ransac.o | build
-	$(CXX) $(CXXFLAGS) -MMD -MP -o $@ $< build/homography.o build/ransac.o $(LDLIBS)
+# checks of the DLT, RANSAC and corner error code (tests/test_geometry.cpp)
+TEST_OBJS = build/homography.o build/ransac.o build/groundtruth.o
+build/test_geometry: tests/test_geometry.cpp $(TEST_OBJS) | build
+	$(CXX) $(CXXFLAGS) -MMD -MP -o $@ $< $(TEST_OBJS) $(LDLIBS)
 
 test: build/test_geometry
 	./build/test_geometry
