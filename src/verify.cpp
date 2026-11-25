@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <chrono>
 #include <iostream>
 #include <memory>
@@ -104,6 +105,42 @@ static std::vector<Verification> verifyCandidates(const Descriptors &query,
     return ver;
 }
 
+// New order of the candidates (positions in ver, i.e. in the original ranking):
+// more final inliers first; same inliers: smaller median error first; still
+// the same: original order. Failed candidates have 0 inliers, so they go after
+// all the valid ones and keep their original order between them.
+// stable_sort keeps the original order for the remaining ties.
+static std::vector<int> rankByInliers(const std::vector<Verification> &ver)
+{
+    std::vector<int> order(ver.size());
+    for (int c = 0; c < (int)ver.size(); c++)
+        order[c] = c;
+
+    std::stable_sort(order.begin(), order.end(), [&](int a, int b) {
+        const Verification &va = ver[a], &vb = ver[b];
+        if (va.inliers != vb.inliers)
+            return va.inliers > vb.inliers;
+        if (va.ok && vb.ok)
+            return va.medianError < vb.medianError;
+        return false;
+    });
+    return order;
+}
+
+// Order used only for comparison in the experiments: more matches accepted by
+// the Lowe test first (no RANSAC), ties in the original order.
+static std::vector<int> rankByMatches(const std::vector<Verification> &ver)
+{
+    std::vector<int> order(ver.size());
+    for (int c = 0; c < (int)ver.size(); c++)
+        order[c] = c;
+
+    std::stable_sort(order.begin(), order.end(), [&](int a, int b) {
+        return ver[a].matches > ver[b].matches;
+    });
+    return order;
+}
+
 int main(int argc, char **argv)
 {
     Args args;
@@ -141,23 +178,33 @@ int main(int argc, char **argv)
 
             auto start = std::chrono::steady_clock::now();
             std::vector<Verification> ver = verifyCandidates(query, desc, cand.images, q, args);
+            std::vector<int> after = rankByInliers(ver);
             auto end = std::chrono::steady_clock::now();
             double verMs = std::chrono::duration<double, std::milli>(end - start).count();
+
+            // comparison ranking, not part of the timed verification
+            std::vector<int> byMatches = rankByMatches(ver);
 
             std::cout << "Query: " << db.queries[q].seq << "\n"
                       << "Candidates: " << cand.images.size() << "\n"
                       << "Times: candidates " << cand.timeMs << " ms, verification "
                       << verMs << " ms\n";
-            for (int r = 0; r < TOP && r < (int)ver.size(); r++) {
-                const Verification &v = ver[r];
-                std::cout << "Before-Rank-" << r + 1 << ": " << db.base[v.image].id
-                          << "  matches " << v.matches << "  inliers " << v.inliers
+            int n = std::min(TOP, (int)ver.size());
+            for (int r = 0; r < n; r++)
+                std::cout << "Before-Rank-" << r + 1 << ": " << db.base[ver[r].image].id << "\n";
+            for (int r = 0; r < n; r++) {
+                const Verification &v = ver[after[r]];
+                std::cout << "After-Rank-" << r + 1 << ": " << db.base[v.image].id
+                          << "  (was " << after[r] + 1 << ")  inliers " << v.inliers
                           << "  median ";
                 if (v.ok)
                     std::cout << v.medianError << "\n";
                 else
                     std::cout << "NA\n";
             }
+            for (int r = 0; r < n; r++)
+                std::cout << "Matches-Rank-" << r + 1 << ": " << db.base[ver[byMatches[r]].image].id
+                          << "  matches " << ver[byMatches[r]].matches << "\n";
         }
         std::cerr << "Queries with fewer than " << args.C << " candidates: " << fewer << "\n";
     } catch (const std::exception &e) {
