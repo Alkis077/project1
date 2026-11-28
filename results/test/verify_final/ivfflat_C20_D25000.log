@@ -1,0 +1,36 @@
+Vocabulary: read from cache/vocab/K256_S500_seed1_train06f0daf54d84ccf7.bin
+BoVW: read from cache/bovw/K256_S500_seed1_train06f0daf54d84ccf7_test_D25000.bin
+Queries: 23, base: 25100
+k-means iteration 10: 807 points changed
+k-means iteration 20: 385 points changed
+k-means iteration 30: 257 points changed
+k-means iteration 40: 95 points changed
+k-means iteration 50: 82 points changed
+k-means iteration 60: 81 points changed
+k-means iteration 70: 23 points changed
+k-means iteration 80: 8 points changed
+k-means iteration 90: 9 points changed
+k-means iteration 100: 1 points changed
+IVF: 159 clusters, k-means 100 iterations
+Query 1/23 doneQuery 2/23 doneQuery 3/23 doneQuery 4/23 doneQuery 5/23 doneQuery 6/23 doneQuery 7/23 doneQuery 8/23 doneQuery 9/23 doneQuery 10/23 doneQuery 11/23 doneQuery 12/23 doneQuery 13/23 doneQuery 14/23 doneQuery 15/23 doneQuery 16/23 doneQuery 17/23 doneQuery 18/23 doneQuery 19/23 doneQuery 20/23 doneQuery 21/23 doneQuery 22/23 doneQuery 23/23 done
+IVFFlat, C = 20
+All (23 queries, 115 relevant pairs)
+  original: Recall@5 0.669565, Recall@10 0.721739, mAP@10 0.681763
+  matches:  Recall@5 0.756522, Recall@10 0.765217, mAP@10 0.758696
+  inliers:  Recall@5 0.765217, Recall@10 0.765217, mAP@10 0.762319
+  time per query: candidates 2.59085 ms, verification 1619.81 ms
+  valid homographies 88 (0.765217), accurate 81 (0.704348), mean corner error 11.2534 px
+Illumination (11 queries, 55 relevant pairs)
+  original: Recall@5 0.672727, Recall@10 0.709091, mAP@10 0.675657
+  matches:  Recall@5 0.727273, Recall@10 0.727273, mAP@10 0.727273
+  inliers:  Recall@5 0.727273, Recall@10 0.727273, mAP@10 0.727273
+  time per query: candidates 2.64783 ms, verification 539.175 ms
+  valid homographies 40 (0.727273), accurate 40 (0.727273), mean corner error 0.523743 px
+Viewpoint (12 queries, 60 relevant pairs)
+  original: Recall@5 0.666667, Recall@10 0.733333, mAP@10 0.687361
+  matches:  Recall@5 0.783333, Recall@10 0.8, mAP@10 0.7875
+  inliers:  Recall@5 0.8, Recall@10 0.8, mAP@10 0.794444
+  time per query: candidates 2.53861 ms, verification 2610.39 ms
+  valid homographies 48 (0.8), accurate 41 (0.683333), mean corner error 20.1947 px
+Queries with fewer than 20 candidates: 0
+Output written to results/test/verify_final/ivfflat_C20_D25000.txt

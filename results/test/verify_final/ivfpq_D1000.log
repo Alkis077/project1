@@ -1,0 +1,71 @@
+Vocabulary: read from cache/vocab/K256_S500_seed1_train06f0daf54d84ccf7.bin
+BoVW: read from cache/bovw/K256_S500_seed1_train06f0daf54d84ccf7_test_D1000.bin
+Queries: 23, base: 1115
+k-means iteration 10: 37 points changed
+k-means iteration 20: 10 points changed
+k-means iteration 29: 0 points changed
+IVF: 34 clusters, k-means 29 iterations
+k-means iteration 8: 0 points changed
+k-means iteration 10: 0 points changed
+k-means iteration 8: 0 points changed
+k-means iteration 10: 1 points changed
+k-means iteration 11: 0 points changed
+k-means iteration 10: 0 points changed
+k-means iteration 10: 0 points changed
+k-means iteration 10: 2 points changed
+k-means iteration 11: 0 points changed
+k-means iteration 9: 0 points changed
+k-means iteration 10: 0 points changed
+k-means iteration 10: 0 points changed
+k-means iteration 10: 0 points changed
+k-means iteration 10: 1 points changed
+k-means iteration 12: 0 points changed
+k-means iteration 10: 0 points changed
+k-means iteration 10: 2 points changed
+k-means iteration 11: 0 points changed
+k-means iteration 10: 3 points changed
+k-means iteration 15: 0 points changed
+k-means iteration 10: 0 points changed
+k-means iteration 8: 0 points changed
+k-means iteration 8: 0 points changed
+k-means iteration 10: 1 points changed
+k-means iteration 11: 0 points changed
+k-means iteration 9: 0 points changed
+k-means iteration 8: 0 points changed
+k-means iteration 10: 1 points changed
+k-means iteration 13: 0 points changed
+k-means iteration 9: 0 points changed
+k-means iteration 10: 0 points changed
+k-means iteration 10: 3 points changed
+k-means iteration 13: 0 points changed
+k-means iteration 7: 0 points changed
+k-means iteration 7: 0 points changed
+k-means iteration 8: 0 points changed
+k-means iteration 7: 0 points changed
+k-means iteration 8: 0 points changed
+k-means iteration 10: 1 points changed
+k-means iteration 14: 0 points changed
+k-means iteration 7: 0 points changed
+IVFPQ: 32 parts of length 8, 256 centroids each
+Query 1/23 doneQuery 2/23 doneQuery 3/23 doneQuery 4/23 doneQuery 5/23 doneQuery 6/23 doneQuery 7/23 doneQuery 8/23 doneQuery 9/23 doneQuery 10/23 doneQuery 11/23 doneQuery 12/23 doneQuery 13/23 doneQuery 14/23 doneQuery 15/23 doneQuery 16/23 doneQuery 17/23 doneQuery 18/23 doneQuery 19/23 doneQuery 20/23 doneQuery 21/23 doneQuery 22/23 doneQuery 23/23 done
+IVFPQ, C = 100
+All (23 queries, 115 relevant pairs)
+  original: Recall@5 0.730435, Recall@10 0.791304, mAP@10 0.722239
+  matches:  Recall@5 0.913043, Recall@10 0.913043, mAP@10 0.913043
+  inliers:  Recall@5 0.904348, Recall@10 0.904348, mAP@10 0.904348
+  time per query: candidates 0.291991 ms, verification 4889.11 ms
+  valid homographies 108 (0.93913), accurate 98 (0.852174), mean corner error 24.5549 px
+Illumination (11 queries, 55 relevant pairs)
+  original: Recall@5 0.727273, Recall@10 0.745455, mAP@10 0.710303
+  matches:  Recall@5 0.945455, Recall@10 0.945455, mAP@10 0.945455
+  inliers:  Recall@5 0.945455, Recall@10 0.945455, mAP@10 0.945455
+  time per query: candidates 0.295188 ms, verification 2179.96 ms
+  valid homographies 52 (0.945455), accurate 52 (0.945455), mean corner error 0.721952 px
+Viewpoint (12 queries, 60 relevant pairs)
+  original: Recall@5 0.733333, Recall@10 0.833333, mAP@10 0.733181
+  matches:  Recall@5 0.883333, Recall@10 0.883333, mAP@10 0.883333
+  inliers:  Recall@5 0.866667, Recall@10 0.866667, mAP@10 0.866667
+  time per query: candidates 0.28906 ms, verification 7372.5 ms
+  valid homographies 56 (0.933333), accurate 46 (0.766667), mean corner error 46.6856 px
+Queries with fewer than 100 candidates: 0
+Output written to results/test/verify_final/ivfpq_D1000.txt

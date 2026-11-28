@@ -1,0 +1,26 @@
+Vocabulary: read from cache/vocab/K256_S500_seed1_train06f0daf54d84ccf7.bin
+BoVW: read from cache/bovw/K256_S500_seed1_train06f0daf54d84ccf7_validation_D25000.bin
+Queries: 23, base: 25100
+Hypercube: 256 of 256 vertices have points, largest has 358
+Query 1/23 doneQuery 2/23 doneQuery 3/23 doneQuery 4/23 doneQuery 5/23 doneQuery 6/23 doneQuery 7/23 doneQuery 8/23 doneQuery 9/23 doneQuery 10/23 doneQuery 11/23 doneQuery 12/23 doneQuery 13/23 doneQuery 14/23 doneQuery 15/23 doneQuery 16/23 doneQuery 17/23 doneQuery 18/23 doneQuery 19/23 doneQuery 20/23 doneQuery 21/23 doneQuery 22/23 doneQuery 23/23 done
+Hypercube, C = 100
+All (23 queries, 115 relevant pairs)
+  original: Recall@5 0.6, Recall@10 0.608696, mAP@10 0.574348
+  matches:  Recall@5 0.669565, Recall@10 0.678261, mAP@10 0.670435
+  inliers:  Recall@5 0.686957, Recall@10 0.686957, mAP@10 0.686957
+  time per query: candidates 3.6035 ms, verification 2853.47 ms
+  valid homographies 79 (0.686957), accurate 68 (0.591304), mean corner error 2.86576 px
+Illumination (11 queries, 55 relevant pairs)
+  original: Recall@5 0.509091, Recall@10 0.527273, mAP@10 0.488182
+  matches:  Recall@5 0.563636, Recall@10 0.581818, mAP@10 0.565455
+  inliers:  Recall@5 0.6, Recall@10 0.6, mAP@10 0.6
+  time per query: candidates 3.58507 ms, verification 1900.5 ms
+  valid homographies 33 (0.6), accurate 32 (0.581818), mean corner error 1.01677 px
+Viewpoint (12 queries, 60 relevant pairs)
+  original: Recall@5 0.683333, Recall@10 0.683333, mAP@10 0.653333
+  matches:  Recall@5 0.766667, Recall@10 0.766667, mAP@10 0.766667
+  inliers:  Recall@5 0.766667, Recall@10 0.766667, mAP@10 0.766667
+  time per query: candidates 3.62038 ms, verification 3727.04 ms
+  valid homographies 46 (0.766667), accurate 36 (0.6), mean corner error 4.19222 px
+Queries with fewer than 100 candidates: 0
+Output written to results/validation/verify_best/hypercube_best.txt

@@ -1,0 +1,34 @@
+Vocabulary: read from cache/vocab/K256_S500_seed1_train06f0daf54d84ccf7.bin
+BoVW: 23 queries, 115 HPatches base images
+Skipping im2009.jpg (no SIFT descriptors)
+Skipping im2096.jpg (no SIFT descriptors)
+Skipping im2541.jpg (no SIFT descriptors)
+Skipping im3090.jpg (no SIFT descriptors)
+Skipping im4496.jpg (no SIFT descriptors)
+Skipping im4953.jpg (no SIFT descriptors)
+MIRFlickr: 4994 / 5000
+MIRFlickr: 5000 / 5000
+BoVW: saved to cache/bovw/K256_S500_seed1_train06f0daf54d84ccf7_test_D5000.bin
+Queries: 23, base: 5115
+Query 1/23 doneQuery 2/23 doneQuery 3/23 doneQuery 4/23 doneQuery 5/23 doneQuery 6/23 doneQuery 7/23 doneQuery 8/23 doneQuery 9/23 doneQuery 10/23 doneQuery 11/23 doneQuery 12/23 doneQuery 13/23 doneQuery 14/23 doneQuery 15/23 doneQuery 16/23 doneQuery 17/23 doneQuery 18/23 doneQuery 19/23 doneQuery 20/23 doneQuery 21/23 doneQuery 22/23 doneQuery 23/23 done
+Exact, C = 100
+All (23 queries, 115 relevant pairs)
+  original: Recall@5 0.713043, Recall@10 0.756522, mAP@10 0.710673
+  matches:  Recall@5 0.86087, Recall@10 0.86087, mAP@10 0.86087
+  inliers:  Recall@5 0.852174, Recall@10 0.852174, mAP@10 0.852174
+  time per query: candidates 1.18016 ms, verification 4094.58 ms
+  valid homographies 102 (0.886957), accurate 92 (0.8), mean corner error 25.8858 px
+Illumination (11 queries, 55 relevant pairs)
+  original: Recall@5 0.709091, Recall@10 0.745455, mAP@10 0.71671
+  matches:  Recall@5 0.872727, Recall@10 0.872727, mAP@10 0.872727
+  inliers:  Recall@5 0.872727, Recall@10 0.872727, mAP@10 0.872727
+  time per query: candidates 1.17242 ms, verification 1807.57 ms
+  valid homographies 48 (0.872727), accurate 48 (0.872727), mean corner error 0.592922 px
+Viewpoint (12 queries, 60 relevant pairs)
+  original: Recall@5 0.716667, Recall@10 0.766667, mAP@10 0.705139
+  matches:  Recall@5 0.85, Recall@10 0.85, mAP@10 0.85
+  inliers:  Recall@5 0.833333, Recall@10 0.833333, mAP@10 0.833333
+  time per query: candidates 1.18726 ms, verification 6191 ms
+  valid homographies 54 (0.9), accurate 44 (0.733333), mean corner error 48.3684 px
+Queries with fewer than 100 candidates: 0
+Output written to results/test/verify_final/exact_D5000.txt

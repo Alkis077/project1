@@ -1,0 +1,222 @@
+Vocabulary: read from cache/vocab/K256_S500_seed1_train06f0daf54d84ccf7.bin
+BoVW: read from cache/bovw/K256_S500_seed1_train06f0daf54d84ccf7_test_D10000.bin
+Queries: 23, base: 10115
+k-means iteration 10: 287 points changed
+k-means iteration 20: 121 points changed
+k-means iteration 30: 21 points changed
+k-means iteration 40: 12 points changed
+k-means iteration 50: 4 points changed
+k-means iteration 60: 2 points changed
+k-means iteration 67: 0 points changed
+IVF: 101 clusters, k-means 67 iterations
+k-means iteration 10: 218 points changed
+k-means iteration 20: 68 points changed
+k-means iteration 30: 18 points changed
+k-means iteration 40: 24 points changed
+k-means iteration 50: 14 points changed
+k-means iteration 60: 3 points changed
+k-means iteration 62: 0 points changed
+k-means iteration 10: 229 points changed
+k-means iteration 20: 50 points changed
+k-means iteration 30: 20 points changed
+k-means iteration 40: 3 points changed
+k-means iteration 47: 0 points changed
+k-means iteration 10: 206 points changed
+k-means iteration 20: 67 points changed
+k-means iteration 30: 25 points changed
+k-means iteration 40: 20 points changed
+k-means iteration 50: 4 points changed
+k-means iteration 60: 2 points changed
+k-means iteration 61: 0 points changed
+k-means iteration 10: 243 points changed
+k-means iteration 20: 40 points changed
+k-means iteration 30: 30 points changed
+k-means iteration 40: 25 points changed
+k-means iteration 50: 2 points changed
+k-means iteration 52: 0 points changed
+k-means iteration 10: 196 points changed
+k-means iteration 20: 35 points changed
+k-means iteration 30: 47 points changed
+k-means iteration 40: 15 points changed
+k-means iteration 46: 0 points changed
+k-means iteration 10: 218 points changed
+k-means iteration 20: 47 points changed
+k-means iteration 30: 36 points changed
+k-means iteration 40: 23 points changed
+k-means iteration 50: 13 points changed
+k-means iteration 60: 2 points changed
+k-means iteration 66: 0 points changed
+k-means iteration 10: 244 points changed
+k-means iteration 20: 53 points changed
+k-means iteration 30: 32 points changed
+k-means iteration 40: 14 points changed
+k-means iteration 50: 24 points changed
+k-means iteration 60: 16 points changed
+k-means iteration 70: 25 points changed
+k-means iteration 80: 6 points changed
+k-means iteration 82: 0 points changed
+k-means iteration 10: 198 points changed
+k-means iteration 20: 76 points changed
+k-means iteration 30: 18 points changed
+k-means iteration 36: 0 points changed
+k-means iteration 10: 233 points changed
+k-means iteration 20: 31 points changed
+k-means iteration 30: 11 points changed
+k-means iteration 40: 9 points changed
+k-means iteration 50: 5 points changed
+k-means iteration 59: 0 points changed
+k-means iteration 10: 247 points changed
+k-means iteration 20: 114 points changed
+k-means iteration 30: 38 points changed
+k-means iteration 40: 14 points changed
+k-means iteration 50: 2 points changed
+k-means iteration 54: 0 points changed
+k-means iteration 10: 245 points changed
+k-means iteration 20: 48 points changed
+k-means iteration 30: 13 points changed
+k-means iteration 40: 4 points changed
+k-means iteration 48: 0 points changed
+k-means iteration 10: 198 points changed
+k-means iteration 20: 41 points changed
+k-means iteration 30: 23 points changed
+k-means iteration 40: 5 points changed
+k-means iteration 50: 2 points changed
+k-means iteration 54: 0 points changed
+k-means iteration 10: 228 points changed
+k-means iteration 20: 73 points changed
+k-means iteration 30: 6 points changed
+k-means iteration 38: 0 points changed
+k-means iteration 10: 213 points changed
+k-means iteration 20: 43 points changed
+k-means iteration 30: 14 points changed
+k-means iteration 40: 5 points changed
+k-means iteration 50: 7 points changed
+k-means iteration 54: 0 points changed
+k-means iteration 10: 220 points changed
+k-means iteration 20: 54 points changed
+k-means iteration 30: 3 points changed
+k-means iteration 36: 0 points changed
+k-means iteration 10: 216 points changed
+k-means iteration 20: 55 points changed
+k-means iteration 30: 38 points changed
+k-means iteration 40: 13 points changed
+k-means iteration 50: 18 points changed
+k-means iteration 60: 13 points changed
+k-means iteration 69: 0 points changed
+k-means iteration 10: 189 points changed
+k-means iteration 20: 51 points changed
+k-means iteration 30: 13 points changed
+k-means iteration 40: 2 points changed
+k-means iteration 45: 0 points changed
+k-means iteration 10: 161 points changed
+k-means iteration 20: 53 points changed
+k-means iteration 30: 15 points changed
+k-means iteration 40: 3 points changed
+k-means iteration 50: 3 points changed
+k-means iteration 52: 0 points changed
+k-means iteration 10: 190 points changed
+k-means iteration 20: 69 points changed
+k-means iteration 30: 43 points changed
+k-means iteration 40: 7 points changed
+k-means iteration 47: 0 points changed
+k-means iteration 10: 242 points changed
+k-means iteration 20: 42 points changed
+k-means iteration 30: 12 points changed
+k-means iteration 40: 14 points changed
+k-means iteration 50: 7 points changed
+k-means iteration 57: 0 points changed
+k-means iteration 10: 192 points changed
+k-means iteration 20: 107 points changed
+k-means iteration 30: 20 points changed
+k-means iteration 40: 9 points changed
+k-means iteration 50: 1 points changed
+k-means iteration 52: 0 points changed
+k-means iteration 10: 277 points changed
+k-means iteration 20: 71 points changed
+k-means iteration 30: 35 points changed
+k-means iteration 40: 16 points changed
+k-means iteration 50: 2 points changed
+k-means iteration 53: 0 points changed
+k-means iteration 10: 201 points changed
+k-means iteration 20: 64 points changed
+k-means iteration 30: 53 points changed
+k-means iteration 40: 8 points changed
+k-means iteration 50: 16 points changed
+k-means iteration 60: 5 points changed
+k-means iteration 66: 0 points changed
+k-means iteration 10: 189 points changed
+k-means iteration 20: 66 points changed
+k-means iteration 30: 18 points changed
+k-means iteration 40: 3 points changed
+k-means iteration 50: 7 points changed
+k-means iteration 60: 0 points changed
+k-means iteration 10: 238 points changed
+k-means iteration 20: 83 points changed
+k-means iteration 30: 23 points changed
+k-means iteration 40: 1 points changed
+k-means iteration 42: 0 points changed
+k-means iteration 10: 273 points changed
+k-means iteration 20: 98 points changed
+k-means iteration 30: 47 points changed
+k-means iteration 40: 19 points changed
+k-means iteration 50: 7 points changed
+k-means iteration 60: 2 points changed
+k-means iteration 63: 0 points changed
+k-means iteration 10: 197 points changed
+k-means iteration 20: 52 points changed
+k-means iteration 30: 21 points changed
+k-means iteration 40: 6 points changed
+k-means iteration 48: 0 points changed
+k-means iteration 10: 224 points changed
+k-means iteration 20: 62 points changed
+k-means iteration 30: 26 points changed
+k-means iteration 40: 5 points changed
+k-means iteration 50: 6 points changed
+k-means iteration 55: 0 points changed
+k-means iteration 10: 164 points changed
+k-means iteration 20: 40 points changed
+k-means iteration 30: 28 points changed
+k-means iteration 40: 35 points changed
+k-means iteration 50: 7 points changed
+k-means iteration 59: 0 points changed
+k-means iteration 10: 215 points changed
+k-means iteration 20: 92 points changed
+k-means iteration 30: 35 points changed
+k-means iteration 40: 14 points changed
+k-means iteration 50: 3 points changed
+k-means iteration 60: 0 points changed
+k-means iteration 10: 266 points changed
+k-means iteration 20: 79 points changed
+k-means iteration 30: 40 points changed
+k-means iteration 40: 9 points changed
+k-means iteration 50: 8 points changed
+k-means iteration 60: 5 points changed
+k-means iteration 64: 0 points changed
+k-means iteration 10: 250 points changed
+k-means iteration 20: 62 points changed
+k-means iteration 30: 35 points changed
+k-means iteration 40: 8 points changed
+k-means iteration 49: 0 points changed
+IVFPQ: 32 parts of length 8, 256 centroids each
+Query 1/23 doneQuery 2/23 doneQuery 3/23 doneQuery 4/23 doneQuery 5/23 doneQuery 6/23 doneQuery 7/23 doneQuery 8/23 doneQuery 9/23 doneQuery 10/23 doneQuery 11/23 doneQuery 12/23 doneQuery 13/23 doneQuery 14/23 doneQuery 15/23 doneQuery 16/23 doneQuery 17/23 doneQuery 18/23 doneQuery 19/23 doneQuery 20/23 doneQuery 21/23 doneQuery 22/23 doneQuery 23/23 done
+IVFPQ, C = 100
+All (23 queries, 115 relevant pairs)
+  original: Recall@5 0.695652, Recall@10 0.765217, mAP@10 0.704362
+  matches:  Recall@5 0.817391, Recall@10 0.826087, mAP@10 0.82236
+  inliers:  Recall@5 0.826087, Recall@10 0.834783, mAP@10 0.828019
+  time per query: candidates 0.495352 ms, verification 3503.48 ms
+  valid homographies 98 (0.852174), accurate 89 (0.773913), mean corner error 19.1506 px
+Illumination (11 queries, 55 relevant pairs)
+  original: Recall@5 0.709091, Recall@10 0.745455, mAP@10 0.713874
+  matches:  Recall@5 0.818182, Recall@10 0.836364, mAP@10 0.828571
+  inliers:  Recall@5 0.836364, Recall@10 0.836364, mAP@10 0.836364
+  time per query: candidates 0.505147 ms, verification 1458.64 ms
+  valid homographies 46 (0.836364), accurate 46 (0.836364), mean corner error 0.60834 px
+Viewpoint (12 queries, 60 relevant pairs)
+  original: Recall@5 0.683333, Recall@10 0.783333, mAP@10 0.695642
+  matches:  Recall@5 0.816667, Recall@10 0.816667, mAP@10 0.816667
+  inliers:  Recall@5 0.816667, Recall@10 0.833333, mAP@10 0.82037
+  time per query: candidates 0.486374 ms, verification 5377.91 ms
+  valid homographies 52 (0.866667), accurate 43 (0.716667), mean corner error 35.5533 px
+Queries with fewer than 100 candidates: 0
+Output written to results/test/verify_final/ivfpq_D10000.txt

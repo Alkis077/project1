@@ -1,0 +1,29 @@
+Vocabulary: read from cache/vocab/K256_S500_seed1_train06f0daf54d84ccf7.bin
+BoVW: read from cache/bovw/K256_S500_seed1_train06f0daf54d84ccf7_test_D1000.bin
+Queries: 23, base: 1115
+k-means iteration 10: 37 points changed
+k-means iteration 20: 10 points changed
+k-means iteration 29: 0 points changed
+IVF: 34 clusters, k-means 29 iterations
+Query 1/23 doneQuery 2/23 doneQuery 3/23 doneQuery 4/23 doneQuery 5/23 doneQuery 6/23 doneQuery 7/23 doneQuery 8/23 doneQuery 9/23 doneQuery 10/23 doneQuery 11/23 doneQuery 12/23 doneQuery 13/23 doneQuery 14/23 doneQuery 15/23 doneQuery 16/23 doneQuery 17/23 doneQuery 18/23 doneQuery 19/23 doneQuery 20/23 doneQuery 21/23 doneQuery 22/23 doneQuery 23/23 done
+IVFFlat, C = 100
+All (23 queries, 115 relevant pairs)
+  original: Recall@5 0.713043, Recall@10 0.791304, mAP@10 0.736173
+  matches:  Recall@5 0.921739, Recall@10 0.921739, mAP@10 0.921739
+  inliers:  Recall@5 0.913043, Recall@10 0.913043, mAP@10 0.913043
+  time per query: candidates 0.300898 ms, verification 5058.89 ms
+  valid homographies 109 (0.947826), accurate 99 (0.86087), mean corner error 24.3393 px
+Illumination (11 queries, 55 relevant pairs)
+  original: Recall@5 0.709091, Recall@10 0.763636, mAP@10 0.727316
+  matches:  Recall@5 0.963636, Recall@10 0.963636, mAP@10 0.963636
+  inliers:  Recall@5 0.963636, Recall@10 0.963636, mAP@10 0.963636
+  time per query: candidates 0.30365 ms, verification 2327.2 ms
+  valid homographies 53 (0.963636), accurate 53 (0.963636), mean corner error 0.728247 px
+Viewpoint (12 queries, 60 relevant pairs)
+  original: Recall@5 0.716667, Recall@10 0.816667, mAP@10 0.744292
+  matches:  Recall@5 0.883333, Recall@10 0.883333, mAP@10 0.883333
+  inliers:  Recall@5 0.866667, Recall@10 0.866667, mAP@10 0.866667
+  time per query: candidates 0.298375 ms, verification 7562.94 ms
+  valid homographies 56 (0.933333), accurate 46 (0.766667), mean corner error 46.6856 px
+Queries with fewer than 100 candidates: 0
+Output written to results/test/verify_final/ivfflat_D1000.txt

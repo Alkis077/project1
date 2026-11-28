@@ -1,0 +1,33 @@
+Vocabulary: read from cache/vocab/K256_S500_seed1_train06f0daf54d84ccf7.bin
+BoVW: read from cache/bovw/K256_S500_seed1_train06f0daf54d84ccf7_validation_D10000.bin
+Queries: 23, base: 10115
+k-means iteration 10: 246 points changed
+k-means iteration 20: 125 points changed
+k-means iteration 30: 83 points changed
+k-means iteration 40: 16 points changed
+k-means iteration 50: 7 points changed
+k-means iteration 60: 7 points changed
+k-means iteration 64: 0 points changed
+IVF: 101 clusters, k-means 64 iterations
+Query 1/23 doneQuery 2/23 doneQuery 3/23 doneQuery 4/23 doneQuery 5/23 doneQuery 6/23 doneQuery 7/23 doneQuery 8/23 doneQuery 9/23 doneQuery 10/23 doneQuery 11/23 doneQuery 12/23 doneQuery 13/23 doneQuery 14/23 doneQuery 15/23 doneQuery 16/23 doneQuery 17/23 doneQuery 18/23 doneQuery 19/23 doneQuery 20/23 doneQuery 21/23 doneQuery 22/23 doneQuery 23/23 done
+IVFFlat, C = 50
+All (23 queries, 115 relevant pairs)
+  original: Recall@5 0.765217, Recall@10 0.8, mAP@10 0.768758
+  matches:  Recall@5 0.826087, Recall@10 0.843478, mAP@10 0.834783
+  inliers:  Recall@5 0.852174, Recall@10 0.852174, mAP@10 0.852174
+  time per query: candidates 1.72273 ms, verification 2429.3 ms
+  valid homographies 98 (0.852174), accurate 75 (0.652174), mean corner error 3.71343 px
+Illumination (11 queries, 55 relevant pairs)
+  original: Recall@5 0.690909, Recall@10 0.745455, mAP@10 0.701039
+  matches:  Recall@5 0.745455, Recall@10 0.781818, mAP@10 0.763636
+  inliers:  Recall@5 0.8, Recall@10 0.8, mAP@10 0.8
+  time per query: candidates 1.61275 ms, verification 1549.79 ms
+  valid homographies 44 (0.8), accurate 41 (0.745455), mean corner error 2.03273 px
+Viewpoint (12 queries, 60 relevant pairs)
+  original: Recall@5 0.833333, Recall@10 0.85, mAP@10 0.830833
+  matches:  Recall@5 0.9, Recall@10 0.9, mAP@10 0.9
+  inliers:  Recall@5 0.9, Recall@10 0.9, mAP@10 0.9
+  time per query: candidates 1.82354 ms, verification 3235.51 ms
+  valid homographies 54 (0.9), accurate 34 (0.566667), mean corner error 5.0829 px
+Queries with fewer than 50 candidates: 0
+Output written to results/validation/verify_D/ivfflat_D10000.txt

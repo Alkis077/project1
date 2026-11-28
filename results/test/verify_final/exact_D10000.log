@@ -1,0 +1,35 @@
+Vocabulary: read from cache/vocab/K256_S500_seed1_train06f0daf54d84ccf7.bin
+BoVW: 23 queries, 115 HPatches base images
+Skipping im2009.jpg (no SIFT descriptors)
+Skipping im2096.jpg (no SIFT descriptors)
+Skipping im2541.jpg (no SIFT descriptors)
+Skipping im3090.jpg (no SIFT descriptors)
+Skipping im4496.jpg (no SIFT descriptors)
+Skipping im4953.jpg (no SIFT descriptors)
+Skipping im6046.jpg (no SIFT descriptors)
+MIRFlickr: 9993 / 10000
+MIRFlickr: 10000 / 10000
+BoVW: saved to cache/bovw/K256_S500_seed1_train06f0daf54d84ccf7_test_D10000.bin
+Queries: 23, base: 10115
+Query 1/23 doneQuery 2/23 doneQuery 3/23 doneQuery 4/23 doneQuery 5/23 doneQuery 6/23 doneQuery 7/23 doneQuery 8/23 doneQuery 9/23 doneQuery 10/23 doneQuery 11/23 doneQuery 12/23 doneQuery 13/23 doneQuery 14/23 doneQuery 15/23 doneQuery 16/23 doneQuery 17/23 doneQuery 18/23 doneQuery 19/23 doneQuery 20/23 doneQuery 21/23 doneQuery 22/23 doneQuery 23/23 done
+Exact, C = 100
+All (23 queries, 115 relevant pairs)
+  original: Recall@5 0.686957, Recall@10 0.756522, mAP@10 0.707816
+  matches:  Recall@5 0.852174, Recall@10 0.852174, mAP@10 0.852174
+  inliers:  Recall@5 0.852174, Recall@10 0.86087, mAP@10 0.854348
+  time per query: candidates 2.35159 ms, verification 3882.39 ms
+  valid homographies 102 (0.886957), accurate 92 (0.8), mean corner error 25.8858 px
+Illumination (11 queries, 55 relevant pairs)
+  original: Recall@5 0.709091, Recall@10 0.745455, mAP@10 0.714978
+  matches:  Recall@5 0.872727, Recall@10 0.872727, mAP@10 0.872727
+  inliers:  Recall@5 0.872727, Recall@10 0.872727, mAP@10 0.872727
+  time per query: candidates 2.36187 ms, verification 1718.68 ms
+  valid homographies 48 (0.872727), accurate 48 (0.872727), mean corner error 0.592922 px
+Viewpoint (12 queries, 60 relevant pairs)
+  original: Recall@5 0.666667, Recall@10 0.766667, mAP@10 0.70125
+  matches:  Recall@5 0.833333, Recall@10 0.833333, mAP@10 0.833333
+  inliers:  Recall@5 0.833333, Recall@10 0.85, mAP@10 0.8375
+  time per query: candidates 2.34217 ms, verification 5865.79 ms
+  valid homographies 54 (0.9), accurate 44 (0.733333), mean corner error 48.3684 px
+Queries with fewer than 100 candidates: 0
+Output written to results/test/verify_final/exact_D10000.txt

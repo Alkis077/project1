@@ -1,0 +1,25 @@
+Vocabulary: read from cache/vocab/K256_S500_seed1_train06f0daf54d84ccf7.bin
+BoVW: read from cache/bovw/K256_S500_seed1_train06f0daf54d84ccf7_validation_D25000.bin
+Queries: 23, base: 25100
+Query 1/23 doneQuery 2/23 doneQuery 3/23 doneQuery 4/23 doneQuery 5/23 doneQuery 6/23 doneQuery 7/23 doneQuery 8/23 doneQuery 9/23 doneQuery 10/23 doneQuery 11/23 doneQuery 12/23 doneQuery 13/23 doneQuery 14/23 doneQuery 15/23 doneQuery 16/23 doneQuery 17/23 doneQuery 18/23 doneQuery 19/23 doneQuery 20/23 doneQuery 21/23 doneQuery 22/23 doneQuery 23/23 done
+Exact, C = 50
+All (23 queries, 115 relevant pairs)
+  original: Recall@5 0.730435, Recall@10 0.782609, mAP@10 0.748551
+  matches:  Recall@5 0.782609, Recall@10 0.817391, mAP@10 0.806211
+  inliers:  Recall@5 0.826087, Recall@10 0.834783, mAP@10 0.833333
+  time per query: candidates 5.72156 ms, verification 2279.64 ms
+  valid homographies 93 (0.808696), accurate 66 (0.573913), mean corner error 9.33618 px
+Illumination (11 queries, 55 relevant pairs)
+  original: Recall@5 0.654545, Recall@10 0.709091, mAP@10 0.672338
+  matches:  Recall@5 0.709091, Recall@10 0.763636, mAP@10 0.74329
+  inliers:  Recall@5 0.8, Recall@10 0.8, mAP@10 0.8
+  time per query: candidates 5.74287 ms, verification 1491.16 ms
+  valid homographies 41 (0.745455), accurate 37 (0.672727), mean corner error 2.36909 px
+Viewpoint (12 queries, 60 relevant pairs)
+  original: Recall@5 0.8, Recall@10 0.85, mAP@10 0.818413
+  matches:  Recall@5 0.85, Recall@10 0.866667, mAP@10 0.863889
+  inliers:  Recall@5 0.85, Recall@10 0.866667, mAP@10 0.863889
+  time per query: candidates 5.70202 ms, verification 3002.42 ms
+  valid homographies 52 (0.866667), accurate 29 (0.483333), mean corner error 14.8295 px
+Queries with fewer than 50 candidates: 0
+Output written to results/validation/verify_rho/rho0.9.txt
