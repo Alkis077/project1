@@ -6,6 +6,7 @@
 #include <random>
 #include <vector>
 
+#include "groundtruth.h"
 #include "homography.h"
 #include "ransac.h"
 
@@ -119,6 +120,32 @@ int main()
     check(!ransac(m, params, rng).ok, "RANSAC: fails with fewer than 4 matches");
     m = makeMatches(shift, {{0, 0}, {10, 0}, {20, 0}, {30, 0}, {40, 0}, {50, 0}});
     check(!ransac(m, params, rng).ok, "RANSAC: fails when all points are on one line");
+
+    // degenerate final inliers
+    m = makeMatches(shift, {{10, 10}, {120, 15}, {60, 90}, {200, 140}, {35, 170}});
+    check(!degenerateInliers(m, all(5)), "inliers: 5 points spread in both images are fine");
+    m.clear();
+    for (int k = 0; k < 24; k++)
+        m.push_back({0, 0, 10.0 * k, 5.0 * (k % 7), 286.2, 44.3});
+    check(degenerateInliers(m, all(24)),
+          "inliers: 24 points of the query on the same point of the candidate");
+    m = makeMatches(shift, {{0, 0}, {10, 10}, {20, 20}, {30, 30}, {40, 40}, {50, 50}});
+    check(degenerateInliers(m, all(6)), "inliers: all points on one line");
+    m = makeMatches(shift, {{0, 0}, {100, 0}, {0, 80}, {0, 0}, {100, 0}});
+    check(degenerateInliers(m, all(5)), "inliers: only 3 different points");
+
+    // corner error (image 101 x 81, corners (0,0), (100,0), (100,80), (0,80))
+    double err;
+    check(cornerError(persp, persp, 101, 81, err) && err == 0,
+          "corner error: same homography gives 0");
+    check(cornerError(shift, I, 101, 81, err) && std::fabs(err - std::sqrt(500.0)) < 1e-9,
+          "corner error: shift by (20, 10) against identity gives sqrt(500) = 22.36");
+    check(cornerError(2 * shift, shift, 101, 81, err) && err < 1e-9,
+          "corner error: does not depend on the scale of H");
+    Eigen::Matrix3d atInfinity;
+    atInfinity << 1, 0, 0, 0, 1, 0, 1, 0, 0;   // c = x, so corner (0, 0) goes to infinity
+    check(!cornerError(atInfinity, I, 101, 81, err),
+          "corner error: fails when a corner cannot be projected");
 
     printf("%s\n", failed == 0 ? "all checks passed" : "some checks FAILED");
     return failed == 0 ? 0 : 1;

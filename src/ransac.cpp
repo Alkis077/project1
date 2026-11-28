@@ -28,6 +28,51 @@ static std::vector<int> findInliers(const std::vector<Match> &matches, const Eig
     return inliers;
 }
 
+// One image of a set of matches (second: points (u, v) instead of (x, y)).
+// The spread of the points is measured with the eigenvalues l1 >= l2 of their
+// 2x2 covariance matrix: l2 / l1 is almost 0 when the points are on one line.
+// l2 / l1 is a ratio of squared lengths, like eta of the collinear triples,
+// so the same limit EPS_COL is used.
+static bool degenerateImage(const std::vector<Match> &matches, const std::vector<int> &idx,
+                            bool second)
+{
+    std::vector<std::pair<double, double>> pts;
+    for (int i : idx) {
+        const Match &m = matches[i];
+        pts.push_back(second ? std::make_pair(m.u, m.v) : std::make_pair(m.x, m.y));
+    }
+    std::sort(pts.begin(), pts.end());
+    pts.erase(std::unique(pts.begin(), pts.end()), pts.end());
+    if (pts.size() < 4)
+        return true;
+
+    double cx = 0, cy = 0;
+    for (const auto &p : pts) {
+        cx += p.first;
+        cy += p.second;
+    }
+    cx /= pts.size();
+    cy /= pts.size();
+
+    double sxx = 0, syy = 0, sxy = 0;
+    for (const auto &p : pts) {
+        double dx = p.first - cx, dy = p.second - cy;
+        sxx += dx * dx;
+        syy += dy * dy;
+        sxy += dx * dy;
+    }
+    // eigenvalues of [sxx sxy; sxy syy] (the 1/n factor does not change l2 / l1)
+    double half = (sxx + syy) / 2;
+    double root = std::sqrt(std::max(0.0, half * half - (sxx * syy - sxy * sxy)));
+    double l1 = half + root, l2 = half - root;
+    return l1 <= 0 || l2 / l1 < EPS_COL;
+}
+
+bool degenerateInliers(const std::vector<Match> &matches, const std::vector<int> &idx)
+{
+    return degenerateImage(matches, idx, false) || degenerateImage(matches, idx, true);
+}
+
 // 4 different random matches
 static void randomSample(int M, std::mt19937 &rng, int idx[4])
 {
@@ -114,6 +159,11 @@ RansacResult ransac(const std::vector<Match> &matches, const RansacParams &param
     // final inliers among all M matches
     res.inliers = findInliers(matches, H, params.tau, res.medianError);
     if (res.inliers.size() < 4)
+        return res;
+
+    // the final inliers must not be degenerate in either image (repeated
+    // points or all on one line), otherwise the estimate is not valid
+    if (degenerateInliers(matches, res.inliers))
         return res;
 
     res.H = H;

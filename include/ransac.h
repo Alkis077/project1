@@ -31,4 +31,10 @@ struct RansacResult {
 RansacResult ransac(const std::vector<Match> &matches, const RansacParams &params,
                     std::mt19937 &rng);
 
+// true if a set of matches is degenerate in one of the two images: fewer than
+// 4 different points, or all of them (almost) on one line. Used for the final
+// inliers: e.g. many points of the query matched to the same point of the
+// candidate give a homography that maps a whole region to one point.
+bool degenerateInliers(const std::vector<Match> &matches, const std::vector<int> &idx);
+
 #endif
