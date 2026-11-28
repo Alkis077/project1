@@ -6,14 +6,7 @@
 #include <stdexcept>
 #include <vector>
 
-struct Metrics {
-    double recall5 = 0, recall10 = 0, ap10 = 0;
-};
-
-// result: indices in db.base, closest first. Missing positions (fewer than
-// TOP_K results) count as non-relevant.
-static Metrics computeMetrics(const std::vector<int> &result, const Database &db,
-                              const Image &query)
+Metrics computeMetrics(const std::vector<int> &result, const Database &db, const Image &query)
 {
     Metrics m;
     int found = 0;   // relevant images seen so far
